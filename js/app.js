@@ -32,7 +32,7 @@ $(document).foundation()
                 $imgExt = $imgAlt.split('.');
 
         if ($imgExt[2] === 'gif') {
-            $img.attr('src', $imgAlt).attr('data-alt', $imgSrc);
+            $img.attr('src', $imgAlt).attr('data-alt', $imgSrc).attr('class', 'intro-image');
         }
 
     });
