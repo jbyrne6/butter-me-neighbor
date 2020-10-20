@@ -1,17 +1,38 @@
 $(document).foundation()
 
-function alertButtered() {
-    alert('I have been buttered!')
-}
+// Get the .gif images from the "data-alt".
+    var getGif = function() {
+        var gif = [];
+        $('img').each(function() {
+            var data = $(this).data('alt');
+            gif.push(data);
+        });
+        return gif;
+    }
 
-window.addEventListener('mouseup', (e) => {
-    // Let's pick a random color between #000000 and #FFFFFF
-    const color = Math.round(Math.random() * 0xFFFFFF)
-  
-    // Let's format the color to fit CSS requirements
-    const fill = '#' + color.toString(16).padStart(6,'0')
-  
-    // Let's apply our color in the
-    // element we actually clicked on
-    e.target.style.fill = fill
-  })
+    var gif = getGif();
+
+    // Preload all the gif images.
+    var image = [];
+
+    $.each(gif, function(index) {
+        image[index]     = new Image();
+        image[index].src = gif[index];
+    });
+
+    // Change the image to .gif when clicked and vice versa.
+    $('figure').on('click', function() {
+
+        var $this   = $(this),
+                $index  = $this.index(),
+                
+                $img    = $this.children('img'),
+                $imgSrc = $img.attr('src'),
+                $imgAlt = $img.attr('data-alt'),
+                $imgExt = $imgAlt.split('.');
+
+        if ($imgExt[2] === 'gif') {
+            $img.attr('src', $imgAlt).attr('data-alt', $imgSrc);
+        }
+
+    });
