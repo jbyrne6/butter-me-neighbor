@@ -22,6 +22,8 @@ $(document).foundation()
 
     // Change the image to .gif when clicked and vice versa.
     $('figure').on('click', function() {
+        let hasBeenClicked = false;
+        console.log('testing')
 
         var $this   = $(this),
                 $index  = $this.index(),
@@ -31,8 +33,15 @@ $(document).foundation()
                 $imgAlt = $img.attr('data-alt'),
                 $imgExt = $imgAlt.split('.');
 
-        if ($imgExt[2] === 'gif') {
-            $img.attr('src', $imgAlt).attr('data-alt', $imgSrc).attr('class', 'intro-image');
+        if (hasBeenClicked) {
+            console.log('has been clicked')
         }
+
+        if ($imgExt[2] === 'gif') {
+            console.log('is gif')
+            $img.attr('src', $imgAlt).attr('data-alt', $imgSrc);
+            hasBeenClicked = true
+        }
+
 
     });
