@@ -11,8 +11,6 @@ $(document).foundation()
         return gif;
     }
 
-    var gif = getGif();
-
     // Change the image to .gif when clicked and vice versa.
     $('figure').on('click', function() {
         var $this   = $(this),
@@ -29,16 +27,13 @@ $(document).foundation()
             $img.attr('src', $imgAlt).attr('data-alt', $imgSrc);
         }
 
+        // fade out for the intro animation
         setTimeout(function() { 
             $(".intro-animation").fadeOut("slow");
         }, 5000);
 
+        // fade in for the logo
         setTimeout(function() { 
             $(".logo-div").fadeIn("slow");
         }, 6000);
     });
-
-    // $(window).scroll(function(){
-    //     $(".intro-animation").css("opacity", 1 - $(window).scrollTop() / 250);
-    //     $(".logo-div").css("opacity", $(window).scrollTop() / 250);
-    //   });
