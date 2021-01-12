@@ -34,6 +34,6 @@ $(document).foundation()
 
         // fade in for the logo
         setTimeout(function() { 
-            $(".logo-div").fadeIn("slow");
+            $(".fade-in-div").fadeIn("slow");
         }, 6000);
     });

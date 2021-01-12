@@ -18,7 +18,7 @@
     width: 40%;
 }
 
-.logo-div {
+.fade-in-div {
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
@@ -28,15 +28,24 @@
 }
 
 .projector-screen {
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
-    /* opacity: 0; */
-    display:none;
-    background-color: #BEB4B0;
+    margin-top: 20px
+    /* width: 80%;
+    height: auto */
 }
 
 .couch {
-    width: 100%;
+    /* width: 50vh; */
+    /* height: auto; */
     height: auto;
+    max-width: 100%;
+}
+
+.loft {
+    /* border-left: 3px solid black;
+    border-right: 3px solid black; */
+    /* border-bottom: 3px solid black; */
+    width: 100%
+    /* position:fixed; */
+    /* bottom:0;
+    height:50vh;  */
 }
