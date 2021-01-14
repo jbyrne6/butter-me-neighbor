@@ -31,9 +31,11 @@ $(document).foundation()
         setTimeout(function() { 
             $(".intro-animation").fadeOut("slow");
         }, 5000);
+        // was 5000
 
         // fade in for the logo
         setTimeout(function() { 
             $(".fade-in-div").fadeIn("slow");
         }, 6000);
+        //was 6000
     });

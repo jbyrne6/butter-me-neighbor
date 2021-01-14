@@ -28,7 +28,12 @@
 }
 
 .projector-screen {
-    margin-top: 20px
+    margin-top: 20px;
+    width:640px;
+    height:360px;
+    background-color: blue;
+    border: 3px solid black;
+    position: relative;
     /* width: 80%;
     height: auto */
 }
@@ -49,3 +54,36 @@
     /* bottom:0;
     height:50vh;  */
 }
+
+.center-vert-horiz {
+    margin: 0;
+    position: absolute;
+    /* top: 10%; */
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  @keyframes changeheight{
+    from {
+      top: 90%;
+    }
+  
+    to {
+        top: 10%;
+    }
+  }
+
+#bmn-logo {
+    animation-duration: 4s;
+    animation-name: changeheight;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
+}
+
+.vl {
+    border-left: 3px solid black;
+    /* height: 500px; */
+  }
