@@ -22,8 +22,6 @@ $(document).foundation()
 
 
         if ($imgExt[2] === 'gif') {
-            console.log('here it is')
-            console.log('is gif')
             $img.attr('src', $imgAlt).attr('data-alt', $imgSrc);
         }
 

@@ -29,7 +29,8 @@
 
 .projector-screen {
     margin-top: 20px;
-    width:640px;
+    /* width:640px; */
+    width: 90%;
     height:360px;
     background-color: blue;
     border: 3px solid black;
@@ -49,7 +50,7 @@
     /* border-left: 3px solid black;
     border-right: 3px solid black; */
     /* border-bottom: 3px solid black; */
-    width: 100%
+    width: 90%
     /* position:fixed; */
     /* bottom:0;
     height:50vh;  */
@@ -83,7 +84,29 @@
 
 }
 
-.vl {
-    border-left: 3px solid black;
-    /* height: 500px; */
+
+  * {
+    box-sizing: border-box;
   }
+  
+  /* Create three unequal columns that floats next to each other */
+  .column {
+    float: left;
+    padding: 10px;
+  }
+  
+  .left, .right {
+    width: 20%;
+  }
+  
+  .middle {
+    width: 60%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
